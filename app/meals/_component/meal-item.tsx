@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import classes from "./meal-item.module.scss";
-import { MealsItemProps } from "@/app/meals/MealsType";
+import { GetMealProps } from "@/app/meals/MealsType";
 
 export default function MealItem({
   title,
@@ -10,7 +10,7 @@ export default function MealItem({
   image,
   summary,
   creator,
-}: MealsItemProps) {
+}: GetMealProps) {
   return (
     <article className={classes.meal}>
       <header>
