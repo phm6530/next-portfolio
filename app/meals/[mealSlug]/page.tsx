@@ -7,6 +7,17 @@ interface Param {
   mealSlug: string;
 }
 
+export async function generateMetadata({ params }: { params: Param }) {
+  const meal = getMealalone(params.mealSlug);
+
+  if (!meal) {
+    notFound();
+  }
+  return {
+    title: meal.title,
+  };
+}
+
 export default function MealDetailsPage({ params }: { params: Param }) {
   const meal = getMealalone(params.mealSlug);
 
