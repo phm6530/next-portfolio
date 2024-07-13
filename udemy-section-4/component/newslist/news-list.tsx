@@ -16,7 +16,7 @@ export default function NewsList({ news }: { news: NewsProps[] }) {
         {news.map((news) => {
           return (
             <li key={news.id}>
-              <Link href={`news/${news.slug}`}>
+              <Link href={`/news/${news.slug}`}>
                 <img src={`/images/news/${news.image}`} alt={news.title} />
                 {news.slug}
               </Link>

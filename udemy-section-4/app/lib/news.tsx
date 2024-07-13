@@ -18,7 +18,7 @@ export function getAvailableNewsYears() {
   }, []).sort((a, b) => b - a);
 }
 
-export function getAvailableNewsMonths(year: number) {
+export function getAvailableNewsMonths(year: number): number[] {
   return DUMMY_NEWS.reduce<number[]>((months, news) => {
     const newsYear = new Date(news.date).getFullYear();
     if (newsYear === +year) {
